@@ -4,8 +4,8 @@ import { defineStore } from 'pinia'
  *  Every one is a fork of the reviewer's own — nothing here ever targets a
  *  shared repository, and the onward pull request is raised by hand. */
 export const FORKS = [
-  { key: 'hitl', repo: 'metadataApp', base: 'main',
-    upstream: 'wruef/metadataApp',
+  { key: 'hitl', repo: 'rca-metadata', base: 'main',
+    upstream: 'OOI-CabledArray/rca-metadata',
     what: 'HITL sign-offs, and the workflows a run is started from' },
   { key: 'assetManagement', repo: 'asset-management', base: 'master',
     upstream: 'oceanobservatories/asset-management',

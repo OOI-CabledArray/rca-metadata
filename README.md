@@ -55,7 +55,7 @@ the commit it read. [docs/report-contract.md](docs/report-contract.md) says why.
 [docs/post-cruise-review.md](docs/post-cruise-review.md)** for the whole review
 in order, and [docs/using-the-dashboard.md](docs/using-the-dashboard.md) for
 the detail of any step: creating a token, finding your way around, recording a
-decision, starting a run. The site is at **https://wruef.github.io/metadataApp/**.
+decision, starting a run. The site is at **https://ooi-cabledarray.github.io/rca-metadata/**.
 
 A Nuxt 4 single-page app that reads a published report. No backend: the report
 is a file it fetches, and everything else happens in the browser.
@@ -136,7 +136,7 @@ to write that judgement down, so 131 of them came back every run. Writing to the
 
 A [fine-grained token](https://github.com/settings/personal-access-tokens/new)
 scoped to your own forks, with **Contents** and **Pull requests** set to read and
-write, and **Actions** as well on your `metadataApp` fork so a run can be started
+write, and **Actions** as well on your `rca-metadata` fork so a run can be started
 from the dashboard.
 [docs/using-the-dashboard.md](docs/using-the-dashboard.md#signing-in) walks
 through it field by field.
@@ -166,7 +166,7 @@ A batch is keyed by the repository it writes to *and* by what the change is:
 
 | batch | fork | what it carries |
 |---|---|---|
-| Sign-offs | `metadataApp` | the 2i-HITL sheets, all three in one request |
+| Sign-offs | `rca-metadata` | the 2i-HITL sheets, all three in one request |
 | Calibration coefficients | `asset-management` | `calibration/<instrument>/*.csv` |
 | Deployment sheets | `asset-management` | `deployment/<array>_Deploy.csv` |
 | Node positions | `deployments` | `NODE_deployments.csv` |

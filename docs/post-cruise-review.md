@@ -70,13 +70,13 @@ in a state that blocks your next correction.
 Do these once. They are spelled out field by field in
 [using-the-dashboard.md](using-the-dashboard.md#before-you-start).
 
-1. Fork the three repositories to your own account: `wruef/metadataApp`,
+1. Fork the three repositories to your own account: `OOI-CabledArray/rca-metadata`,
    `oceanobservatories/asset-management`, `OOI-CabledArray/deployments`.
 2. Create a fine-grained token scoped to those three forks, with **Contents**
    and **Pull requests** read and write, and **Actions** read and write on the
-   `metadataApp` fork.
+   `rca-metadata` fork.
 3. In the dashboard's **Settings**, paste the token and enter your initials.
-4. On `wruef/metadataApp`, once: **Settings → Actions → General → Allow GitHub
+4. On your `rca-metadata` fork, once: **Settings → Actions → General → Allow GitHub
    Actions to create and approve pull requests**. Step 3 needs it.
 
 ## 1. Bring your forks up to date
@@ -85,7 +85,7 @@ The dashboard refuses to write to a fork that is not exactly upstream. Not
 behind it, not ahead of it. So the review starts by making all three identical.
 
 1. Open each fork on GitHub: your `asset-management`, your `deployments`, your
-   `metadataApp`.
+   `rca-metadata`.
 2. Above the file list, GitHub says whether the branch is *behind*, *ahead*, or
    *up to date* with upstream.
 3. **Behind** → press **Sync fork** → **Update branch**. Done.
@@ -128,7 +128,7 @@ on record yet.
 2. Wait. An incremental run is a few minutes; the log lists each instrument and
    what it found.
 3. When it finishes, a pull request named **Serial numbers from the raw
-   archive** appears on `wruef/metadataApp`. Open it.
+   archive** appears on your `rca-metadata` fork. Open it.
 4. Read the diff of `params/rawFileSN.csv`. New rows are this season's
    deployments. A row ending `-99999` was attempted and found nothing; its
    `filesTried` column says which files were read.
@@ -255,7 +255,7 @@ by the repository it writes to and by what kind of change it is:
 
 | group | goes to | carries |
 |---|---|---|
-| Sign-offs | your `metadataApp` fork | all three 2i-HITL sheets |
+| Sign-offs | your `rca-metadata` fork | all three 2i-HITL sheets |
 | Calibration coefficients | your `asset-management` fork | every calibration file you corrected |
 | Deployment sheets | your `asset-management` fork | every deployment you repositioned or reassigned |
 
@@ -317,7 +317,7 @@ their own branch and repository.
    For the other two repositories:
 
        https://github.com/OOI-CabledArray/deployments/compare/main...YOU:deployments:history-20260918T153944Z?expand=1
-       https://github.com/wruef/metadataApp/compare/main...YOU:metadataApp:hitl-20260918T153944Z?expand=1
+       https://github.com/OOI-CabledArray/rca-metadata/compare/main...YOU:rca-metadata:hitl-20260918T153944Z?expand=1
 
    Or by hand: on the shared repository press **Pull requests → New pull
    request → compare across forks**, set *base repository* to the shared one
@@ -340,19 +340,14 @@ their own branch and repository.
 You should have: your change upstream as one commit, your fork identical to
 upstream, and no pull request left open on your fork.
 
-### If you own the shared repository
+### If your fork predates the move
 
-`wruef/metadataApp` is the shared repository for the sign-off sheets. If you
-are its owner you have no fork of it: the dashboard's sign-off pull request is
-already on the shared repository, and you merge it there directly. Steps 4 to
-9 do not apply to that one batch. The other two repositories are not yours,
-and the steps above apply in full.
-
-*Note: the plan is to move this repository to the OOI-CabledArray shared org as
-the last step of this build. Once that happens, `wruef/metadataApp` becomes a
-fork rather than the shared repository, and steps 4–9 (the fork workflow) will
-apply to it too, same as the other two repositories. Update this section once
-the move is done.*
+This repository was `wruef/metadataApp` until it moved to
+`OOI-CabledArray/rca-metadata`. A fork made before the move is still called
+`rca-metadata`; GitHub renames the upstream, never the forks. Rename yours to
+`rca-metadata` under **Settings → General → Repository name** so the dashboard
+finds it, or enter it by hand on the dashboard's **Settings** page. Either way
+the sign-off batch follows the steps above like the other two repositories.
 
 ### Doing several batches
 
@@ -368,7 +363,7 @@ Sign-offs and corrections are inputs to a run. The report on screen was
 produced before you made them, so nothing on it moves until a new run reads
 them.
 
-1. When the sign-off pull request has merged into `wruef/metadataApp`, and the
+1. When the sign-off pull request has merged into `OOI-CabledArray/rca-metadata`, and the
    asset-management corrections have merged upstream, sync your forks (step 1).
 2. Publish another production run (step 4).
 3. Reload. On the overview, the situations you decided have gone or shrunk.

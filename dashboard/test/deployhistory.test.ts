@@ -31,7 +31,7 @@ describe('counting what is in a file', () => {
  * reach that run's history rather than the newest one.
  */
 describe('which history belongs to which run', () => {
-  const LATEST = '/metadataApp/reports/history-latest.json'
+  const LATEST = '/rca-metadata/reports/history-latest.json'
 
   it('is the fixed url for the current run', () => {
     expect(historyUrlFor(LATEST, null)).toBe(LATEST)
@@ -39,7 +39,7 @@ describe('which history belongs to which run', () => {
 
   it('follows from the report name for a published run', () => {
     expect(historyUrlFor(LATEST, 'report_20260917T230227Z.json'))
-      .toBe('/metadataApp/reports/history_20260917T230227Z.json')
+      .toBe('/rca-metadata/reports/history_20260917T230227Z.json')
   })
 
   it('keeps the directory the reports are served from', () => {

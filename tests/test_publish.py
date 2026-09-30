@@ -156,5 +156,6 @@ def test_theBaseBranchFollowsTheRepositoryNameNotTheOwner():
     else propose against a branch that was not there."""
     assert baseBranchOf('wruef/asset-management') == 'master'
     assert baseBranchOf('someone/deployments') == 'main'
+    assert baseBranchOf('someone/rca-metadata') == 'main'
     assert baseBranchOf('someone/metadataApp') == 'main'
     assert baseBranchOf('someone/deployments-2026') == 'master'

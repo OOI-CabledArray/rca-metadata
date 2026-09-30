@@ -2,7 +2,7 @@
  * Where the dashboard looks for the files it reads.
  *
  * A GitHub Pages project site is served from a subdirectory —
- * `https://wruef.github.io/metadataApp/` — so an absolute `/reports/latest.json`
+ * `https://ooi-cabledarray.github.io/rca-metadata/` — so an absolute `/reports/latest.json`
  * asks github.io for a file that is not there. Every path the app fetches is
  * therefore relative and joined to the base the site was built for.
  */
@@ -17,7 +17,7 @@ export function withBase(base: string, path: string) {
  * in the app: a reviewer has to be able to read how to get a token before they
  * have a dashboard they can sign in to, and GitHub renders them as they are.
  */
-const REPO = 'https://github.com/wruef/metadataApp/blob/main'
+const REPO = 'https://github.com/OOI-CabledArray/rca-metadata/blob/main'
 export const DOCS = `${REPO}/docs`
 
 /** A file of this repository on GitHub, for the places a reader has to go and

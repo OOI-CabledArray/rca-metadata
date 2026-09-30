@@ -64,7 +64,7 @@ describe('proposing a batch', () => {
     await Promise.resolve()
 
     batch.queueSignoff({ sheet: 'calibrations', key: 'c.csv', status: 'Clear', notes: 'later' })
-    held.settle('https://github.com/wruef/metadataApp/pull/9')
+    held.settle('https://github.com/wruef/rca-metadata/pull/9')
     await sending
 
     expect(batch.forBatch('signoffs').map((entry) => entry.key)).toEqual(['calibrations:c.csv'])
