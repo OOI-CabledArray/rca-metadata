@@ -27,3 +27,13 @@ updates:
       # gate the merge either way.
       nuxt:
         patterns: ["nuxt", "@nuxt/*", "@pinia/*", "pinia", "vue", "vue-router", "@tailwindcss/*", "tailwindcss"]
+    ignore:
+      # TypeScript 7 is the native port and drops lib/tsc, which vue-tsc loads,
+      # so `npm run typecheck` fails outright. Lift once vue-tsc supports it.
+      - dependency-name: "typescript"
+        versions: [">=7"]
+      # Types track the Node that builds the site (NODE_VERSION in pages.yaml).
+      # Newer types would accept calls that runtime does not have. Raise this
+      # bound together with NODE_VERSION.
+      - dependency-name: "@types/node"
+        versions: [">=25"]
