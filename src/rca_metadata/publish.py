@@ -95,7 +95,9 @@ class PullRequest:
 ## Inferred from the fork's name before, which made a fork called anything else
 ## -- deployments-2026, or a rename -- propose against a branch that is not
 ## there, and the failure arrives from the GitHub API rather than from here.
-BASE_BRANCH = {'deployments': 'main', 'metadataApp': 'main',
+## metadataApp is this repository's name before it moved to OOI-CabledArray;
+## a fork made before the move keeps it.
+BASE_BRANCH = {'deployments': 'main', 'rca-metadata': 'main', 'metadataApp': 'main',
                'asset-management': 'master', 'calibrationFiles': 'master'}
 DEFAULT_BASE = 'master'
 

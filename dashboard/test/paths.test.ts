@@ -10,18 +10,18 @@ describe('where the dashboard looks for a report', () => {
   /** The whole reason this exists: a Pages project site is under /<repo>/, and
    *  an absolute path asks github.io for a file that is not there. */
   it('serves from the repository path on a Pages project site', () => {
-    expect(withBase('/metadataApp/', 'reports/latest.json')).toBe(
-      '/metadataApp/reports/latest.json',
+    expect(withBase('/rca-metadata/', 'reports/latest.json')).toBe(
+      '/rca-metadata/reports/latest.json',
     )
   })
 
   it('does not double the separator, whichever side carries it', () => {
-    expect(withBase('/metadataApp', '/reports/latest.json')).toBe('/metadataApp/reports/latest.json')
+    expect(withBase('/rca-metadata', '/reports/latest.json')).toBe('/rca-metadata/reports/latest.json')
     expect(withBase('', 'reports/latest.json')).toBe('/reports/latest.json')
   })
 
   it('leaves a full URL alone, for a report kept somewhere else', () => {
-    expect(withBase('/metadataApp/', 'https://example.org/report.json')).toBe(
+    expect(withBase('/rca-metadata/', 'https://example.org/report.json')).toBe(
       'https://example.org/report.json',
     )
   })

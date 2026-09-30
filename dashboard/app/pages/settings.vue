@@ -120,7 +120,7 @@ async function submit() {
           <li>Under <b>Repository access</b>, select only your forks of the three repositories below.</li>
           <li>Under <b>Permissions</b>, set <b>Contents</b> and <b>Pull requests</b> to read and write.</li>
           <li>
-            On your <b>metadataApp</b> fork, also set <b>Actions</b> to read and write. That is what
+            On your <b>rca-metadata</b> fork, also set <b>Actions</b> to read and write. That is what
             lets you start a verification run from the bar at the top, and nothing else needs it.
           </li>
           <li>Give it an expiry you are comfortable with, then paste it above.</li>

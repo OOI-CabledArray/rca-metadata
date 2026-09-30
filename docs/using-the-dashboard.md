@@ -6,7 +6,7 @@ For the whole post-cruise review in order, step by step, read
 [post-cruise-review.md](post-cruise-review.md) and come back here for the
 detail of any one step.
 
-The dashboard is at **https://wruef.github.io/metadataApp/**. It is a web page
+The dashboard is at **https://ooi-cabledarray.github.io/rca-metadata/**. It is a web page
 with no server behind it. Everything it shows comes from one file that a
 verification run produced, and everything you write goes back to GitHub as a
 pull request under your own name.
@@ -34,7 +34,7 @@ and a token only to record decisions or to start a run.
 If you are going to do either, fork three repositories to your own GitHub
 account first. Open each one and press **Fork**:
 
-- `wruef/metadataApp` — this repository, which holds the sign-off sheets and
+- `OOI-CabledArray/rca-metadata` — this repository, which holds the sign-off sheets and
   the workflows
 - `oceanobservatories/asset-management`
 - `OOI-CabledArray/deployments`
@@ -65,7 +65,7 @@ Then open **Permissions → Repository permissions** and set:
 | Pull requests | Read and write | to open the pull request carrying them |
 | Actions | Read and write | to start a verification run from the dashboard |
 
-**Actions is only needed on your `metadataApp` fork.** Nothing else needs it.
+**Actions is only needed on your `rca-metadata` fork.** Nothing else needs it.
 
 You do not need organisation access, and you do not need any permission on any
 upstream repository. Press **Generate token** and copy it. GitHub shows it once.
@@ -199,7 +199,7 @@ Each group is **one pull request** on **one of your own forks**. The groups are:
 
 | group | fork | what it carries |
 |---|---|---|
-| Sign-offs | your `metadataApp` | all three 2i-HITL sheets |
+| Sign-offs | your `rca-metadata` | all three 2i-HITL sheets |
 | Calibration coefficients | your `asset-management` | every calibration file you corrected |
 | Deployment sheets | your `asset-management` | every deployment you repositioned or reassigned |
 | Node positions | your `deployments` | every node you repositioned |
@@ -512,7 +512,7 @@ is read-only. Edit the token, set Contents to read and write, then sign out and
 back in on the Settings page.
 
 **GitHub refused to start a run.** The same, for **Actions**, on your
-`metadataApp` fork.
+`rca-metadata` fork.
 
 **The dashboard says there is no report.** No run has published yet, or the last
 one did not finish. Check the Actions tab of your fork.
